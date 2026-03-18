@@ -299,6 +299,7 @@ def create_app(openclaw) -> FastAPI:
         version="1.0.0",
     )
     saas_base_url = _normalize_service_url(os.getenv("SAAS_API_URL"), "http://localhost:3001/saas")
+    logger.info(f"[SaaS Proxy] Resolved URL: {saas_base_url}")
 
     # ── CORS ─────────────────────────────────────────────────────────────────
     _allowed_origins = [
