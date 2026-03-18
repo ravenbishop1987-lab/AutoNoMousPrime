@@ -1,0 +1,82 @@
+services:
+  - type: web
+    name: autonomous-prime-web
+    env: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/status
+    envVars:
+      - key: ENABLE_SCHEDULER
+        value: "false"
+      - key: DATA_DIR
+        value: /var/data
+      - key: OUTPUTS_DIR
+        value: /var/data/outputs
+      - key: COMMERCE_API_URL
+        fromService:
+          type: pserv
+          name: autonomous-prime-commerce
+          property: hostport
+      - key: SAAS_API_URL
+        fromService:
+          type: pserv
+          name: autonomous-prime-saas
+          property: hostport
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+    disk:
+      name: autonomous-prime-web-data
+      mountPath: /var/data
+
+  - type: pserv
+    name: autonomous-prime-saas
+    env: node
+    rootDir: api
+    buildCommand: npm ci
+    startCommand: npm run start
+    healthCheckPath: /saas/health
+    envVars:
+      - key: FRONTEND_URL
+        sync: false
+      - key: PYTHON_API_URL
+        fromService:
+          type: web
+          name: autonomous-prime-web
+          property: hostport
+      - key: INTERNAL_API_TOKEN
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: CLERK_PUBLISHABLE_KEY
+        sync: false
+      - key: CLERK_SECRET_KEY
+        sync: false
+
+  - type: pserv
+    name: autonomous-prime-commerce
+    env: node
+    rootDir: services/commerce-api
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    healthCheckPath: /health
+    envVars:
+      - key: APP_URL
+        sync: false
+      - key: COMMERCE_DB_PATH
+        value: /var/data/commerce.db
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+    disk:
+      name: autonomous-prime-commerce-data
+      mountPath: /var/data

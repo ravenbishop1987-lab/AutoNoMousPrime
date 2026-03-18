@@ -1,0 +1,25 @@
+{
+  "name": "autonomous-prime-api",
+  "version": "1.0.0",
+  "description": "Autonomous Prime — SaaS API layer (auth, billing, orgs, job limits)",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "@clerk/express": "^2.0.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^8.3.1",
+    "morgan": "^1.10.0",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^8.0.2",
+    "stripe": "^17.0.0",
+    "zod": "^4.3.6"
+  }
+}

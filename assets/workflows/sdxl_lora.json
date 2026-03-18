@@ -1,0 +1,51 @@
+{
+  "1": {
+    "inputs": { "text": "POSITIVE_PROMPT", "clip": ["3", 1] },
+    "class_type": "CLIPTextEncode"
+  },
+  "2": {
+    "inputs": { "text": "NEGATIVE_PROMPT", "clip": ["3", 1] },
+    "class_type": "CLIPTextEncode"
+  },
+  "3": {
+    "inputs": {
+      "lora_name": "LORA_NAME",
+      "strength_model": 0.7,
+      "strength_clip": 0.7,
+      "model": ["4", 0],
+      "clip": ["4", 1]
+    },
+    "class_type": "LoraLoader"
+  },
+  "4": {
+    "inputs": { "ckpt_name": "dreamshaper_xl.safetensors" },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "5": {
+    "inputs": {
+      "seed": 0,
+      "steps": 30,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": ["3", 0],
+      "positive": ["1", 0],
+      "negative": ["2", 0],
+      "latent_image": ["6", 0]
+    },
+    "class_type": "KSampler"
+  },
+  "6": {
+    "inputs": { "width": 1024, "height": 1024, "batch_size": 1 },
+    "class_type": "EmptyLatentImage"
+  },
+  "7": {
+    "inputs": { "samples": ["5", 0], "vae": ["4", 2] },
+    "class_type": "VAEDecode"
+  },
+  "8": {
+    "inputs": { "filename_prefix": "ap_image", "images": ["7", 0] },
+    "class_type": "SaveImage"
+  }
+}

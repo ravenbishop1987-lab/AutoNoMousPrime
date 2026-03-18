@@ -1,0 +1,67 @@
+[
+  {
+    "name": "ADHD Task Done Checklist",
+    "tagline": "Finish 3 Tasks in 30 Minutes",
+    "product_type": "checklist",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Unfinished tasks from scattered priorities",
+    "transformation": "From scattered task lists to 3 completed tasks in 30 minutes",
+    "why_this_sells": "Immediate visible progress for ADHD brains",
+    "chapters": [],
+    "target_audience": "ADHD adults struggling with task initiation",
+    "urgency_hook": "Don't let distractions derail your goals"
+  },
+  {
+    "name": "3-Minute Focus Fix for ADHD",
+    "tagline": "Break Distractions in 3 Minutes",
+    "product_type": "mini_course",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Constant interruptions breaking focus",
+    "transformation": "From distraction chaos to 3-minute focus sprints",
+    "why_this_sells": "Quick wins build momentum for ADHD brains",
+    "chapters": ["Break the Distraction Cycle", "Focus in 3 Minutes", "Reclaim Your Time"],
+    "target_audience": "ADHD adults needing instant focus tools",
+    "urgency_hook": "Your time is slipping away"
+  },
+  {
+    "name": "ADHD Focus Templates",
+    "tagline": "Organize Your Chaos",
+    "product_type": "template_pack",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Disorganized task management",
+    "transformation": "From chaotic notes to structured task systems",
+    "why_this_sells": "Ready-to-use frameworks for ADHD productivity",
+    "chapters": [],
+    "target_audience": "ADHD adults with messy workspaces",
+    "urgency_hook": "Your workspace is holding you back"
+  },
+  {
+    "name": "ADHD Daily Routines Prompts",
+    "tagline": "Structure Without Stress",
+    "product_type": "prompt_pack",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Lack of daily structure",
+    "transformation": "From scattered days to focused routines",
+    "why_this_sells": "Simple prompts for ADHD-friendly habits",
+    "chapters": [],
+    "target_audience": "ADHD adults needing structure",
+    "urgency_hook": "Start your day without overwhelm"
+  },
+  {
+    "name": "ADHD Focus Swipe File",
+    "tagline": "Instant Focus Strategies",
+    "product_type": "swipe_file",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Overwhelm from too many options",
+    "transformation": "From overwhelm to actionable focus strategies",
+    "why_this_sells": "Curated tactics for ADHD-specific challenges",
+    "chapters": [],
+    "target_audience": "ADHD adults needing quick solutions",
+    "urgency_hook": "Your focus is slipping through your fingers"
+  }
+]

@@ -1,0 +1,4 @@
+{
+  "name": "Editorial Image Direction",
+  "task_types": ["image_gen", "image_variation"]
+}

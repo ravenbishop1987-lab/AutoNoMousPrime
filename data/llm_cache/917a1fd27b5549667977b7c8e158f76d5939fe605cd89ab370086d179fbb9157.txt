@@ -1,0 +1,67 @@
+[
+  {
+    "name": "30-Day Work-Life Balance Checklist",
+    "tagline": "Stop burning out and reclaim your time",
+    "product_type": "checklist",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Overwhelmed by work demands with no time for personal life",
+    "transformation": "From chaotic scheduling to intentional time blocking",
+    "why_this_sells": "Free, actionable framework for immediate time management wins",
+    "chapters": ["Day 1-7: Setup Your Work-Life Boundary", "Day 8-14: Protect Your Personal Time", "Day 15-30: Sustain Balance Forever"],
+    "target_audience": "Professionals in their 30s struggling with burnout",
+    "urgency_hook": "Before your productivity crashes entirely"
+  },
+  {
+    "name": "30-Day Financial Freedom Plan",
+    "tagline": "Eliminate debt and build wealth without stress",
+    "product_type": "template_pack",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Struggling to pay bills while saving for major life goals",
+    "transformation": "From paycheck-to-paycheck to intentional wealth building",
+    "why_this_sells": "Free budgeting templates with actionable financial milestones",
+    "chapters": ["Debt Payoff Tracker", "Emergency Fund Calculator", "Monthly Budget Blueprint"],
+    "target_audience": "Young adults in their 30s with student loans or credit card debt",
+    "urgency_hook": "Before your credit score tanks permanently"
+  },
+  {
+    "name": "30-Day No-Carb Challenge",
+    "tagline": "Get lean without gym membership or calorie counting",
+    "product_type": "prompt_pack",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Wanting to lose weight but avoiding cardio and strict diets",
+    "transformation": "From stuck in weight loss plateau to leaner without exercise",
+    "why_this_sells": "Simple meal prep prompts with no-carb recipe ideas",
+    "chapters": ["Week 1: Meal Prep Mastery", "Week 2: Snack Smart", "Week 3: Stay Committed"],
+    "target_audience": "Busy professionals seeking easy weight loss solutions",
+    "urgency_hook": "Before your next birthday arrives"
+  },
+  {
+    "name": "30-Day Career Breakthrough Guide",
+    "tagline": "Land your dream job without networking or resume tweaks",
+    "product_type": "checklist",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Stuck in a dead-end job with no clear path forward",
+    "transformation": "From underpaid role to high-impact position",
+    "why_this_sells": "Free framework for skill-building and job search optimization",
+    "chapters": ["Week 1: Skill Audit", "Week 2: Job Market Research", "Week 3: Positioning Strategy"],
+    "target_audience": "Career stagnation seekers in their 30s",
+    "urgency_hook": "Before your next promotion opportunity passes"
+  },
+  {
+    "name": "30-Day Productivity Hack Pack",
+    "tagline": "Do more in 8 hours without working longer hours",
+    "product_type": "template_pack",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Feeling overwhelmed by constant task demands",
+    "transformation": "From scattered tasks to focused, high-impact work",
+    "why_this_sells": "Free productivity templates with time-blocking frameworks",
+    "chapters": ["Focus Tracker", "Task Prioritization Matrix", "Deep Work Schedule"],
+    "target_audience": "Overworked professionals needing efficiency",
+    "urgency_hook": "Before your next deadline arrives"
+  }
+]

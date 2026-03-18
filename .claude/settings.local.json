@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc:*)",
+      "Bash(python -c \"from dashboard.api import create_app, _load_settings, _save_settings; print\\(''OK''\\)\")",
+      "Bash(node -e \"const lr = require\\(''lucide-react''\\); console.log\\(''Image:'', typeof lr.Image, ''ImageIcon:'', typeof lr.ImageIcon\\)\")",
+      "Bash(python -c \":*)"
+    ]
+  }
+}

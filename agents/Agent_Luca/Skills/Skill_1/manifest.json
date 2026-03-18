@@ -1,0 +1,4 @@
+{
+  "name": "Slide Video Assembly",
+  "task_types": ["video_caption", "video_assemble"]
+}

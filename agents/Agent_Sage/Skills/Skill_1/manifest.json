@@ -1,0 +1,4 @@
+{
+  "name": "Publishing Workflow",
+  "task_types": ["post_content", "social_post", "video_publish", "financial_report"]
+}

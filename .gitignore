@@ -1,0 +1,71 @@
+# ── Secrets & credentials ────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+.claude/settings.json
+.claude/settings.local.json
+
+# ── Runtime data & databases ─────────────────────────────────────────────────
+data/settings.json
+data/users/
+data/*.db
+data/*.log
+services/commerce-api/data/
+outputs/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+*.cover
+*.log
+
+# ── Node.js ──────────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-error.log
+.pnp
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# ── Vite / build output ──────────────────────────────────────────────────────
+ui/dist/
+dashboard/static/
+
+# ── OS artifacts ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor artifacts ─────────────────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Coqui TTS env ────────────────────────────────────────────────────────────
+coqui-env/
+
+# ── Generated / cached content ───────────────────────────────────────────────
+data/tts-cache/
+*.tmp

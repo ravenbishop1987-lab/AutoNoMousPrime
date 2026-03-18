@@ -1,0 +1,67 @@
+[
+  {
+    "name": "7-Day Tech-Powered Recovery Checklist",
+    "tagline": "Reclaim independence with smart home automation",
+    "product_type": "checklist",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Struggling to manage daily tasks with limited mobility",
+    "transformation": "Move from frustrated dependency to confident task automation in 7 days",
+    "why_this_sells": "Tech-savvy patients want control through smart home integration",
+    "chapters": ["Smart Home Setup", "Medication Reminders", "Mobility Task Automation", "Safety Protocols", "Progress Tracking"],
+    "target_audience": "Tech-literate patients with post-op mobility limitations",
+    "urgency_hook": "Prevent falls and hospital readmissions before your next appointment"
+  },
+  {
+    "name": "Post-Op Pain Tracker Pro",
+    "tagline": "Turn pain data into recovery insights",
+    "product_type": "template_pack",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Inconsistent pain management leading to delayed recovery",
+    "transformation": "Shift from guesswork to data-driven pain management in 3 days",
+    "why_this_sells": "Patients want real-time insights for better health outcomes",
+    "chapters": ["Pain Diary Template", "Medication Timeline Matrix", "Activity Impact Tracker", "Sleep Pattern Analysis", "Progress Dashboard"],
+    "target_audience": "Patients needing precision in pain management",
+    "urgency_hook": "Track pain spikes before they lead to complications"
+  },
+  {
+    "name": "Post-Surgical Nutrition Blueprint",
+    "tagline": "Fuel healing with science-backed meal plans",
+    "product_type": "template_pack",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Poor nutrition slowing wound healing and recovery",
+    "transformation": "Transform from malnourished to healing-optimized in 7 days",
+    "why_this_sells": "Patients want immediate dietary guidance for faster recovery",
+    "chapters": ["Post-Op Meal Templates", "Hydration Calculator", "Supplement Guide", "Calorie Tracking Sheets", "Nutrient Density Checklist"],
+    "target_audience": "Patients with dietary restrictions and recovery needs",
+    "urgency_hook": "Boost healing before your next checkup"
+  },
+  {
+    "name": "30-Day Mobility Mastery Challenge",
+    "tagline": "Regain independence through tech-enhanced rehab",
+    "product_type": "checklist",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Limited mobility causing frustration and isolation",
+    "transformation": "Regain 80% functional independence through structured tech-assisted rehab",
+    "why_this_sells": "Patients want measurable progress with tech integration",
+    "chapters": ["Daily Mobility Drills", "Smart Home Integration Guide", "Progress Photography Log", "Virtual Rehab Tips", "Recovery Milestone Tracker"],
+    "target_audience": "Patients seeking structured rehab routines",
+    "urgency_hook": "Start your 30-day transformation before complications arise"
+  },
+  {
+    "name": "Smart Home Recovery Kit",
+    "tagline": "Automate your healing environment",
+    "product_type": "template_pack",
+    "offer_type": "lead_magnet",
+    "price": "$0",
+    "pain_point": "Manual task management leading to burnout",
+    "transformation": "Shift from manual labor to automated healing environment in 5 days",
+    "why_this_sells": "Tech-savvy patients want seamless integration for recovery",
+    "chapters": ["Smart Home Setup Guide", "Medication Automation Templates", "Safety Alert Systems", "Voice Assistant Commands", "Environmental Optimization Checklist"],
+    "target_audience": "Patients with tech integration capabilities",
+    "urgency_hook": "Prevent burnout before your next hospital visit"
+  }
+]

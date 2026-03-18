@@ -1,0 +1,67 @@
+[
+  {
+    "name": "5-Minute Focus Hack",
+    "tagline": "Break distractions with science-backed focus triggers",
+    "product_type": "prompt_pack",
+    "offer_type": "low_ticket",
+    "price": "$17",
+    "pain_point": "Constant interruptions derail productivity and task completion",
+    "transformation": "Shift from scattered focus to laser-targeted productivity in 5 minutes",
+    "why_this_sells": "Quick, actionable hacks that deliver immediate results for ADHD brains",
+    "chapters": ["Neuroscience of Focus", "Distraction-Proof Routines", "Focus-Boosting Prompts"],
+    "target_audience": "ADHD adults struggling with workflow interruptions and task initiation",
+    "urgency_hook": "Miss this and keep wasting hours on scattered focus"
+  },
+  {
+    "name": "Task Done Daily",
+    "tagline": "Complete 3 tasks every day without distraction",
+    "product_type": "checklist",
+    "offer_type": "low_ticket",
+    "price": "$17",
+    "pain_point": "Unfinished tasks pile up due to scattered attention",
+    "transformation": "Achieve 3 task completions daily through structured focus blocks",
+    "why_this_sells": "Simple, measurable system that creates visible progress",
+    "chapters": ["Morning Focus Setup", "Midday Task Blocks", "Evening Review Ritual"],
+    "target_audience": "ADHD adults needing structure for task completion",
+    "urgency_hook": "Start today to avoid task overload"
+  },
+  {
+    "name": "ADHD Workflow Templates",
+    "tagline": "Organize your day with distraction-free templates",
+    "product_type": "template_pack",
+    "offer_type": "low_ticket",
+    "price": "$27",
+    "pain_point": "Chaos in task management and workflow organization",
+    "transformation": "Create order from chaos with ready-to-use workflow templates",
+    "why_this_sells": "Pre-built systems that eliminate decision fatigue",
+    "chapters": ["Daily Task Templates", "Project Management Frameworks", "Focus Scheduling Templates"],
+    "target_audience": "ADHD professionals needing workflow clarity",
+    "urgency_hook": "Templates expire after 7 days - claim yours now"
+  },
+  {
+    "name": "Focus Fuel",
+    "tagline": "Quick fixes for instant focus and energy",
+    "product_type": "prompt_pack",
+    "offer_type": "low_ticket",
+    "price": "$17",
+    "pain_point": "Brain fog and low energy disrupt focus and productivity",
+    "transformation": "Regain focus and energy with 5-minute mental resets",
+    "why_this_sells": "Immediate relief for ADHD brain fatigue",
+    "chapters": ["Energy Boost Prompts", "Focus Reset Techniques", "Mental Clarity Hacks"],
+    "target_audience": "ADHD adults experiencing brain fog and focus crashes",
+    "urgency_hook": "Use before your next focus crash"
+  },
+  {
+    "name": "ADHD Focus Swipe File",
+    "tagline": "25+ strategies to beat distraction and stay focused",
+    "product_type": "swipe_file",
+    "offer_type": "low_ticket",
+    "price": "$17",
+    "pain_point": "Lack of practical tools to combat distractions",
+    "transformation": "Access 25+ proven focus strategies in one place",
+    "why_this_sells": "Curated collection of high-impact focus tactics",
+    "chapters": ["Distraction-Proofing Techniques", "Focus-Boosting Rituals", "Productivity Hacks"],
+    "target_audience": "ADHD adults seeking immediate focus solutions",
+    "urgency_hook": "This swipe file is only available for 72 hours"
+  }
+]
