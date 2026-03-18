@@ -17,7 +17,9 @@ COPY requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ui/package*.json ./ui/
+COPY api/package*.json ./api/
 RUN cd ui && npm ci
+RUN cd api && npm ci --production
 
 COPY . .
 RUN cd ui && npm run build

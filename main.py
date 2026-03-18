@@ -162,6 +162,20 @@ async def _run(
         ids = await oc.submit_pipeline(pipeline_topic, pipeline_keywords)
         logger.info(f"[Main] Pipeline queued: {len(ids)} tasks for '{pipeline_topic}'")
 
+    # ── Start Node.js SaaS API as sidecar on port 3001 ───────────────────────
+    import subprocess as _subprocess
+    _saas_proc = None
+    _saas_api_path = Path("api/src/index.js")
+    if _saas_api_path.exists():
+        _saas_env = {**os.environ, "PORT": "3001", "SAAS_API_PORT": "3001"}
+        try:
+            _saas_proc = _subprocess.Popen(["node", str(_saas_api_path)], env=_saas_env)
+            logger.info(f"[Main] SaaS API sidecar started on port 3001 (pid={_saas_proc.pid})")
+        except Exception as _exc:
+            logger.warning(f"[Main] SaaS API sidecar could not start: {_exc}")
+    else:
+        logger.warning("[Main] api/src/index.js not found — SaaS API sidecar skipped")
+
     from dashboard.api import create_app
     fastapi_app = create_app(oc)
 
@@ -178,6 +192,8 @@ async def _run(
     finally:
         if scheduler:
             scheduler.shutdown(wait=False)
+        if _saas_proc and _saas_proc.poll() is None:
+            _saas_proc.terminate()
         await oc.stop()
         logger.info("[Main] Shutdown complete")
 
