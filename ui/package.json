@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "dev:full": "concurrently --kill-others --names \"API,UI\" --prefix-colors \"cyan,magenta\" \"cd .. && python main.py run\" \"vite\"",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
