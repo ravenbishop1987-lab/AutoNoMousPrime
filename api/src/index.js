@@ -52,7 +52,7 @@ import { apiLimiter } from './middleware/apiLimiter.js'
 import { startEmailScheduler } from './services/emailScheduler.js'
 
 const app  = express()
-const PORT = process.env.SAAS_API_PORT || 3001
+const PORT = process.env.PORT || process.env.SAAS_API_PORT || 3001
 app.set('etag', false)
 
 // ── Stripe webhooks must receive raw body BEFORE json() middleware ──────────
