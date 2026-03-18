@@ -197,7 +197,7 @@ def run(
     """Start Autonomous Prime (orchestrator + API + React UI)."""
     if force_free_port:
         _free_port(port)
-    elif not _port_available(host, port):
+    elif not os.getenv("RAILWAY_ENVIRONMENT") and not _port_available(host, port):
         raise typer.BadParameter(
             f"Port {port} is already in use. Stop the existing process or rerun with --force-free-port."
         )
