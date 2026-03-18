@@ -55,6 +55,9 @@ const app  = express()
 const PORT = process.env.PORT || process.env.SAAS_API_PORT || 3001
 app.set('etag', false)
 
+// ── Healthcheck (Railway) ────────────────────────────────────────────────────
+app.get('/api/status', (_req, res) => res.json({ ok: true, service: 'saas' }))
+
 // ── Stripe webhooks must receive raw body BEFORE json() middleware ──────────
 app.use('/saas/webhooks/stripe', express.raw({ type: 'application/json' }))
 
