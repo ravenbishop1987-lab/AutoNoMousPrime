@@ -22,4 +22,4 @@ RUN cd ui && npm ci
 COPY . .
 RUN cd ui && npm run build
 
-CMD ["sh", "-c", "python main.py run --host 0.0.0.0 --port ${PORT:-10000}"]
+CMD ["python", "main.py", "run", "--host", "0.0.0.0", "--port", "8000"]
