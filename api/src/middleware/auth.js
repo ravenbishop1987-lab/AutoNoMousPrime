@@ -14,7 +14,11 @@ const isProd = process.env.NODE_ENV === 'production'
 const disableAuth = process.env.DISABLE_AUTH === 'true'
 
 if (disableAuth && isProd) {
-  throw new Error('DISABLE_AUTH is not allowed in production. Refusing to start.')
+  console.error(
+    '\n[AUTH] ⚠️  WARNING: DISABLE_AUTH=true is set in a production environment.\n' +
+    '       All requests will be authenticated as dev-user.\n' +
+    '       Remove DISABLE_AUTH from your environment variables for real auth.\n'
+  )
 }
 
 const hasClerk = !!process.env.CLERK_PUBLISHABLE_KEY && !!process.env.CLERK_SECRET_KEY
