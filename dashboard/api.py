@@ -325,6 +325,7 @@ def create_app(openclaw) -> FastAPI:
         path = request.url.path
         exempt_prefixes = (
             "/api/auth/config",
+            "/api/status",
             "/api/internal/",
             "/api/commerce/public/landing/",
             "/api/subscribe/",
