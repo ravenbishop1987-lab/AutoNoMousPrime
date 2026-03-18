@@ -3796,7 +3796,8 @@ Rules:
                     content=body or None,
                 )
         except httpx.HTTPError as exc:
-            raise HTTPException(status_code=502, detail=f"Could not reach SaaS API: {exc}") from exc
+            logger.error(f"[SaaS Proxy] FAILED {request.method} {target_url} — {type(exc).__name__}: {exc}")
+            raise HTTPException(status_code=502, detail=f"Could not reach SaaS API: {type(exc).__name__}: {exc}") from exc
 
         response_headers = {
             key: value
