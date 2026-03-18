@@ -35,7 +35,6 @@ services:
     rootDir: api
     buildCommand: npm ci
     startCommand: npm run start
-    healthCheckPath: /saas/health
     envVars:
       - key: FRONTEND_URL
         sync: false
@@ -67,7 +66,6 @@ services:
     rootDir: services/commerce-api
     buildCommand: npm ci && npm run build
     startCommand: npm run start
-    healthCheckPath: /health
     envVars:
       - key: APP_URL
         sync: false
