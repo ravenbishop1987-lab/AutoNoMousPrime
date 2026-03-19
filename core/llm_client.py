@@ -183,7 +183,10 @@ class LLMClient:
             resp = await client.post(f"{self.ollama_url}/api/generate", json=payload)
             resp.raise_for_status()
             data = resp.json()
-            return data.get("response", "")
+            text = data.get("response", "")
+            # Strip <think>...</think> blocks produced by reasoning models (e.g. qwen3)
+            text = re.sub(r"<think>[\s\S]*?</think>", "", text, flags=re.IGNORECASE).strip()
+            return text
 
     async def _resolve_ollama_model(self) -> str:
         if self._resolved_ollama_model:
