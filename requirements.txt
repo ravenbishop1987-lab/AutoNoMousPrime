@@ -1,6 +1,8 @@
 # Autonomous Prime - Requirements
 # PDF export (product agent) — pure Python, no system libs required
 xhtml2pdf>=0.2.11
+# TTS
+edge-tts>=6.1.9
 # Core
 anthropic>=0.40.0
 fastapi>=0.115.0
