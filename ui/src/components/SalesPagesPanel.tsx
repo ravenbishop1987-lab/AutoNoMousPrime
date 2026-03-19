@@ -3,7 +3,7 @@ import { Copy, CreditCard, ExternalLink, RefreshCw, ShoppingCart, ThumbsUp, Tras
 import { deleteSalesPage, getSalesPages, type SalesPage } from '../api'
 
 function useServerBase() {
-  return window.location.protocol + '//' + window.location.hostname + ':8000'
+  return window.location.origin
 }
 
 export default function SalesPagesPanel() {
