@@ -20,6 +20,7 @@ from loguru import logger
 
 from core.prompting import compose_system_prompt, get_prompt_override
 from core.runtime_settings import get_setting
+from core.storage import upload_file as _storage_upload
 
 _SAAS_API_URL = os.getenv("SAAS_API_URL", "http://localhost:3001")
 _INTERNAL_TOKEN = os.getenv("INTERNAL_API_TOKEN", "autonomous-prime-internal")
@@ -119,10 +120,12 @@ class VoiceAgent(BaseAgent):
         if org_id:
             asyncio.create_task(self._record_tts_asset(task, filepath, duration_s, provider))
 
+        storage_url = await _storage_upload("audio", filepath, filepath.name)
         return {
             "type": "audio",
             "topic": topic,
             "filepath": str(filepath),
+            "storage_url": storage_url,
             "char_count": len(clean),
             "chunk_count": chunk_count,
             "duration_estimate_s": duration_s,

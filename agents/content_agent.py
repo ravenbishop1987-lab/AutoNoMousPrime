@@ -14,6 +14,7 @@ from loguru import logger
 from slugify import slugify
 
 from core.prompting import compose_system_prompt, get_prompt_override
+from core.storage import upload_file as _storage_upload
 if TYPE_CHECKING:
     from core.task_queue import Task
     from core.llm_client import LLMClient
@@ -253,10 +254,12 @@ Return ONLY the rewritten post text. No explanation, no quotes, no preamble."""
         seo_path.write_text(json.dumps(seo_out, indent=2), encoding="utf-8")
 
         logger.success(f"[ContentAgent] Blog saved: {filename} ({word_count} words)")
+        storage_url = await _storage_upload("blog", filepath, filename)
         return {
             "type": "blog_post",
             "topic": topic,
             "filepath": str(filepath),
+            "storage_url": storage_url,
             "seo_json_path": str(seo_path),
             "word_count": word_count,
             "aspect_ratio": task.payload.get("aspect_ratio", "16:9"),

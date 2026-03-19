@@ -27,6 +27,7 @@ from slugify import slugify
 
 from core.prompting import compose_system_prompt, get_prompt_override
 from core.runtime_settings import get_setting
+from core.storage import upload_file as _storage_upload
 
 if TYPE_CHECKING:
     from core.task_queue import Task
@@ -339,11 +340,13 @@ class EbookAgent(BaseAgent):
             idx = norm.find("outputs/")
             return "/" + norm[idx:] if idx >= 0 else ""
 
+        storage_url = await _storage_upload("ebook", html_path, f"{slug}/{html_path.name}")
         return {
             "ok": True,
             "filepath": str(html_path),
             "html_path": str(html_path),
             "html_url": _web_url(str(html_path)),
+            "storage_url": storage_url,
             "pdf_path": "",
             "pdf_url": "",
             "cover_image": str(cover_image_path),

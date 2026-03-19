@@ -18,6 +18,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, TYPE_CHECKING
 
+from core.storage import upload_file as _storage_upload
+
 import httpx
 from loguru import logger
 
@@ -256,11 +258,13 @@ Output only the prompt text, nothing else.""",
             logger.warning(f"[ImageAgent] Pexels resize failed ({e}), using original")
 
         logger.success(f"[ImageAgent] Image saved via Pexels: {local_path} (query: {query!r})")
+        storage_url = await _storage_upload("images", local_path, filename)
         return {
             "type": "image",
             "topic": topic,
             "filepath": str(local_path),
             "filename": filename,
+            "storage_url": storage_url,
             "sd_prompt": fallback_prompt,
             "negative_prompt": "",
             "source": "pexels",
@@ -312,12 +316,13 @@ Output only the prompt text, nothing else.""",
         local_path = self._images_dir / filename
         local_path.write_bytes(img_r.content)
         logger.success(f"[ImageAgent] Image saved via DALL-E 3: {local_path}")
-
+        storage_url = await _storage_upload("images", local_path, filename)
         return {
             "type": "image",
             "topic": topic,
             "filepath": str(local_path),
             "filename": filename,
+            "storage_url": storage_url,
             "sd_prompt": prompt,
             "negative_prompt": "",
             "source": "dalle3",
@@ -422,12 +427,13 @@ Output only the prompt text, nothing else.""",
         local_path = self._images_dir / filename
         local_path.write_bytes(img_resp.content)
         logger.success(f"[ImageAgent] Image saved via Replicate: {local_path}")
-
+        storage_url = await _storage_upload("images", local_path, filename)
         return {
             "type": "image",
             "topic": topic,
             "filepath": str(local_path),
             "filename": filename,
+            "storage_url": storage_url,
             "sd_prompt": sd_prompt,
             "negative_prompt": self._build_negative_prompt(negative_prompt),
             "source": "replicate",
@@ -494,11 +500,13 @@ Output only the prompt text, nothing else.""",
         del image_bytes
         logger.debug(f"[ImageAgent] Freed {size:,} bytes of b64 image data from memory after writing {filename}")
         logger.success(f"[ImageAgent] Image saved via Abacus AI: {local_path}")
+        storage_url = await _storage_upload("images", local_path, filename)
         return {
             "type": "image",
             "topic": topic,
             "filepath": str(local_path),
             "filename": filename,
+            "storage_url": storage_url,
             "sd_prompt": sd_prompt,
             "negative_prompt": self._build_negative_prompt(negative_prompt),
             "source": "abacus",

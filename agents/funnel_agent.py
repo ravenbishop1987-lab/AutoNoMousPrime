@@ -21,6 +21,7 @@ if TYPE_CHECKING:
     from core.llm_client import LLMClient
 
 from .base_agent import BaseAgent
+from core.storage import upload_file as _storage_upload
 
 
 LANDING_PAGE_SYSTEM = """You are a world-class conversion copywriter and funnel designer specializing in high-converting opt-in pages.
@@ -689,10 +690,12 @@ Benefit titles and descriptions must name specific strategies, frameworks, or re
         (project_dir / "funnel_meta.json").write_text(_json.dumps(meta, indent=2), encoding="utf-8")
 
         logger.success(f"[FunnelAgent] Funnel ready: {project_dir}")
+        lp_storage = await _storage_upload("funnels", lp_path, f"{slug}/landing_page.html")
         return {
             "type": "funnel",
             "topic": topic,
             "landing_page": str(lp_path),
+            "landing_page_storage_url": lp_storage,
             "email_sequence": str(email_path),
             "thankyou_page": str(ty_path),
             "email_count": len(emails) if isinstance(emails, list) else 0,
@@ -1035,11 +1038,13 @@ IMPORTANT: All copy must be specific to this product and audience. No generic fi
         (project_dir / "sales_meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
 
         logger.success(f"[FunnelAgent] Sales page ready: {project_dir}")
+        sp_storage = await _storage_upload("funnels", sp_path, f"{slug}/sales_page.html")
         return {
             "type": "sales_page",
             "topic": topic,
             "product_name": product_name,
             "sales_page": str(sp_path),
+            "sales_page_storage_url": sp_storage,
             "sales_thankyou_page": str(sty_path),
             "sales_url": f"/s/{slug}",
             "thankyou_url": f"/s/{slug}/thankyou",

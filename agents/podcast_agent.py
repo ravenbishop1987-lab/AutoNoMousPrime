@@ -20,6 +20,7 @@ import httpx
 from loguru import logger
 
 from core.runtime_settings import get_setting
+from core.storage import upload_file as _storage_upload
 
 if TYPE_CHECKING:
     from core.task_queue import Task
@@ -158,10 +159,12 @@ class PodcastAgent(BaseAgent):
         script_path.write_text(json.dumps({"topic": topic, "turns": script}, indent=2), encoding="utf-8")
 
         logger.success(f"[PodcastAgent] Podcast ready: {output_path}")
+        storage_url = await _storage_upload("podcasts", output_path, output_path.name)
         return {
             "type": "podcast",
             "topic": topic,
             "filepath": str(output_path),
+            "storage_url": storage_url,
             "script_path": str(script_path),
             "duration_minutes": duration_minutes,
             "turn_count": len(script),
